@@ -1,5 +1,9 @@
-import {render} from 'react-dom'
+import ReactDOM from 'react-dom'
 import App from './App'
 import React from 'react'
 
-render(<App />,document.getElementById('root'))
+//@ts-ignore
+ReactDOM.hydrate(
+    <App todos={window.todos} />, 
+    document.getElementById('app')
+)

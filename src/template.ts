@@ -1,6 +1,6 @@
 
 
-export default (body:any) => `
+export default (body:any,todos:any) => `
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +8,7 @@ export default (body:any) => `
 </head> 
 <body>
     <div id="root">${body}</div>
+    <script>window.todos = ${JSON.stringify(todos)}</script>
     <script src='/bundle.js'></script>
 </body>
 </html>
